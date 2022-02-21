@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/enter new team.js"></script>
+    <style>
+        #team {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #team td,
+        #team th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #team tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #team tr:hover {
+            background-color: #ddd;
+        }
+
+        #team th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <!-- <script type="module" src="js/all team.js"></script> -->
+    <title>Enter New Team</title>
+
+</head>
+
+<body>
+    <button onclick="showForm()">Add New Team</button><br><br>
+    <form onsubmit="return false" id="form1" style="display: none;">
+        Enter New Team : <input type="text" id="teamName" name="teamName" required><br><br>
+        Enter Team Full Name : <input type="text" id="fullName" required><br><br>
+        Enter Team Logo : <input type="file" id="logo" name="img" accept="image/*" required> <br><br>
+        Enter player Count : <input type="number" name="" id="playerCount" required><br><br>
+        Enter Top Batsman : <input type="text" name="" id="tbatsman" required><br><br>
+        Enter Top Bolwer : <input type="text" name="" id="tbowler" required><br><br>
+        Campionship won Count : <input type="number" name="" id="won" required><br><br>
+        <button type="submit" onclick="saveTeamName()">Submit New Team</button>
+    </form><br>
+    <table id="team" style="padding: 2px;">
+        <thead>
+            <th>Team Name</th>
+            <th>Team Full Name</th>
+            <th>Team Logo</th>
+            <th>player Count</th>
+            <th>Top Batsman</th>
+            <th>Top Bolwer</th>
+            <th>Championship Won</th>
+            <th>Click For All Players</th>
+        </thead>
+        <tbody id="showTeams"></tbody>
+    </table>
+    <!-- <div id="showTeams" ></div> -->
+    <form onsubmit="return false" id="form1" style="visibility: hidden;">
+        Enter New Team : <input type="text" id="teamName" name="teamName" required><br><br>
+        Enter Team Full Name : <input type="text" id="fullName" required><br><br>
+        Enter Team Logo : <input type="file" id="logo" name="img" accept="image/*" required> <br><br>
+        Enter player Count : <input type="number" name="" id="playerCount" required><br><br>
+        Enter Top Batsman : <input type="text" name="" id="tbatsman" required><br><br>
+        Enter Top Bolwer : <input type="text" name="" id="tbowler" required><br><br>
+        Campionship won Count : <input type="number" name="" id="won" required><br><br>
+        <button type="submit" onclick="saveTeamName()">Submit New Team</button>
+    </form>
+
+</body>
+
+</html>
